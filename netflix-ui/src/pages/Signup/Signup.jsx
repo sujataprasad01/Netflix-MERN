@@ -10,14 +10,14 @@ export default function Signup() {
 
     const navigate=useNavigate();
     const [showPassword, setShowPassword] = useState(false);
-  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(true);
+//   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(true);
     const [formValues, setFormValues] = useState({
         email: "",
         password: "",
     });
 
     const handleSignIn=async()=>{
-        setSubmitButtonDisabled(true);
+        // setSubmitButtonDisabled(true);
 
         // if (!formValues.email || !formValues.pass) {
         //     console.log("Fill all fields");
@@ -26,7 +26,7 @@ export default function Signup() {
 
     try{
      const{email, password}=formValues;
-     setSubmitButtonDisabled(false);
+    //  setSubmitButtonDisabled(false);
      await createUserWithEmailAndPassword(firebaseAuth, email, password)
     }catch(err){
         // setSubmitButtonDisabled(false);
@@ -60,7 +60,7 @@ export default function Signup() {
                         }
                         {!showPassword && (<button onClick={() => setShowPassword(true)}>Get Started</button>)}
                     </div>
-                    <button onClick={handleSignIn} onChange={onAuthStateChanged} disabled={submitButtonDisabled} className='btn'> Sign Up</button>
+                    <button onClick={handleSignIn} onChange={onAuthStateChanged}  className='btn'> Sign Up</button>
                     <p >
             Already have an account?{" "}
             <span >
