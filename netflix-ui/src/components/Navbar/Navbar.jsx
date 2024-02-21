@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Netflix() {
+function Navbar() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Netflix() {
   )
 }
 
-export default Netflix
+export default Navbar

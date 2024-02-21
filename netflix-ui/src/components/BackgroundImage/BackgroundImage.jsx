@@ -1,12 +1,11 @@
 import React from 'react'
-import background from '../assests/login.jpg';
-import styled from 'styled-components';
+import background from '../../assests/login.jpg';
+import './BackgroundImage.css'
 function BackgroundImage() {
   return (
-    <Container>
+    <div className='container2'>
         <img src={background} alt='background'></img>
-    </Container>
+    </div>
   )
 }
-const Container=styled.div``;
 export default BackgroundImage
