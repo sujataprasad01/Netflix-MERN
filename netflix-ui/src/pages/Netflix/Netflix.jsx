@@ -8,14 +8,15 @@ import {AiOutlineInfoCircle} from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies, getGenres } from '../../store';
+import Slider from '../../components/Slider/Slider';
 
 function Netflix() {
 
   const [isScrolled, setIsScrolled]=useState(false)
   const navigate=useNavigate();
   const dispatch=useDispatch();
-  const movies=useSelector((state)=>state.netflix.movies);
   const genresLoaded=useSelector((state)=>state.netflix.genresLoaded);
+  const movies=useSelector((state)=>state.netflix.movies);
 
   useEffect(()=>{
     dispatch(getGenres());
@@ -53,6 +54,7 @@ function Netflix() {
         </div>
       </div>
     </div>
+    <Slider movies={movies}></Slider>
     </>
   )
 }
