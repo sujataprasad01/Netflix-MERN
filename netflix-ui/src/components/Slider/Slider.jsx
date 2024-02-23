@@ -1,5 +1,6 @@
 import React from 'react'
 import CardSlider from '../CardSlider/CardSlider'
+import './Slider.css'
 
 function Slider({movies}) {
 
@@ -7,7 +8,7 @@ function Slider({movies}) {
         return movies.slice(from,to)
     }
   return (
-    <div>
+    <div className=''>
       <CardSlider title="Trending Now" data={getMoviesFromRange(0,10)}></CardSlider>
       <CardSlider title="New Releases" data={getMoviesFromRange(10,20)}></CardSlider>
       <CardSlider title="Blockbuster Movies" data={getMoviesFromRange(20,30)}></CardSlider>
