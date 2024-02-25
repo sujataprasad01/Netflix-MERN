@@ -1,6 +1,6 @@
 import React from 'react'
 import {BsArrowLeft} from 'react-icons/bs';
-// import video from '../../';
+import video from '../../assests/pexels-ilia-devaltovskii-20071909 (1440p).mp4'
 import { useNavigate } from 'react-router-dom';
 
 function Player() {
@@ -12,7 +12,7 @@ const navigate=useNavigate()
         <div className="back">
             <BsArrowLeft onClick={()=>navigate(-1)}></BsArrowLeft>
         </div>
-        <video src={''} autoplay loop controls muted></video>
+        <video src={video} autoplay loop controls muted></video>
       </div>
     </div>
   )

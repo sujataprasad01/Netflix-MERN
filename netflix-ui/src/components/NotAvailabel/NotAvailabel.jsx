@@ -1,9 +1,17 @@
 import React from 'react'
-
+import styled from 'styled-components'
 function NotAvailabel() {
   return (
-    <h1 className='not-available'>No Movies availabel for selected genres</h1>
+    <Containerrr>
+    <h1 >No Movies availabel for selected genres</h1>
+    </Containerrr>
   )
 }
 
 export default NotAvailabel
+
+const Containerrr=styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`;

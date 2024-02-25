@@ -34,9 +34,9 @@ function Navbar({isScrolled}) {
             <li>
               <Link className='Link' to='/movies'>Movies</Link>
             </li>
-            <li>
+            {/* <li>
               <Link className='Link' to='/mylist'>My List</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className='right flex a-center'>
