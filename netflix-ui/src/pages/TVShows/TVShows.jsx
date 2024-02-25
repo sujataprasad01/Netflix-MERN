@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchMovies, getGenres } from '../../store';
-import './Movies.css'
+import './TVShows.css'
 import Navbar from '../../components/Navbar/Navbar';
 import Slider from '../../components/Slider/Slider';
 import NotAvailabel from '../../components/NotAvailabel/NotAvailabel';
 import SelectGenres from '../../components/SelectGenres/SelectGenres';
-function Movies() {
+function TVShows() {
 
   const [isScrolled, setIsScrolled]=useState(false)
   const navigate=useNavigate();
@@ -21,7 +21,7 @@ function Movies() {
   })
 
   useEffect(()=>{
-    if(genresLoaded) dispatch(fetchMovies({type:"movies"}))
+    if(genresLoaded) dispatch(fetchMovies({type:"tv"}))
   }, [genresLoaded])
 
   window.onscroll=()=>{
@@ -35,7 +35,7 @@ function Movies() {
         <Navbar isScrolled={isScrolled}></Navbar>
       </div>
       <div className='data'>
-      <SelectGenres genres={genres} type='movie'></SelectGenres>
+      <SelectGenres genres={genres} type='tv'></SelectGenres>
         {
           movies.length?<Slider movies={movies}></Slider> :
           <NotAvailabel></NotAvailabel>
@@ -45,4 +45,4 @@ function Movies() {
   )
 }
 
-export default Movies
+export default TVShows
